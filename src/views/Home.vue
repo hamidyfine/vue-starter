@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        {{ `Welcome to Vue.js Starter kit` }}
+        {{ $t('message') }}
     </div>
 </template>
 
