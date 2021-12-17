@@ -20,7 +20,11 @@
              * 
              */
             fetch() {
-                return this.$services.data.getTodo().then((response) => {
+                this.$services.wp.postsList().then((response) => {
+                    console.log('res', response);
+                });
+
+                this.$wc.get('products').then((response) => {
                     console.log('res', response);
                 });
             },
