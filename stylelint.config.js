@@ -9,16 +9,16 @@ module.exports = {
         'at-rule-no-unknown'       : [
             true,
             {
-                ignoreAtRules: ['function', 'if', 'each', 'include', 'mixin', 'return', 'for', 'use', 'forward', 'debug', 'warn'],
+                ignoreAtRules: ['function', 'if', 'each', 'else', 'include', 'mixin', 'return', 'for', 'use', 'forward', 'debug', 'warn', 'extend'],
             },
         ],
-        'font-family-no-missing-generic-family-keyword': [
+        'font-family-no-missing-generic-family-keyword': null,
+        'selector-pseudo-element-no-unknown'           : [
             true,
             {
-                ignoreFontFamilies: ['icon-md', 'icon-mdi', 'Arial', 'VazirFD', 'IRANSans', 'Tahoma'],
+                ignorePseudoElements: ['v-deep'],
             },
         ],
-
         'declaration-no-important'   : null, // It should be true
         'selector-max-type'          : null, // It should be 3
         'selector-max-id'            : null, // It should be 1

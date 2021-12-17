@@ -1,15 +1,21 @@
 import Vue from 'vue';
+import Http from '@plugins/services/http';
+import i18n from '@plugins/locales';
+import services from '@plugins/services';
 import App from './App.vue';
 import router from './router';
 import store from './store';
-import i18n from './i18n';
 
+Vue.use(services);
 Vue.config.productionTip = false;
+
+// Register Axios in Vue HTTP
+Vue.prototype.$http = Http;
 
 // eslint-disable-next-line vue/require-name-property
 new Vue({
+    i18n,
     router,
     store,
-    i18n,
-    render: (h) => h(App),
+    render: h => h(App),
 }).$mount('#app');
