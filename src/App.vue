@@ -1,11 +1,11 @@
 <template>
-    <div id="app">
-        <router-view />
-    </div>
+    <header>
+        Welcome to Vue starter kit!
+    </header>
+
+    <router-view />
 </template>
 
-<script>
-    export default {
-        name: 'App',
-    };
+<script setup lang="ts">
+    import { RouterView } from 'vue-router';
 </script>
